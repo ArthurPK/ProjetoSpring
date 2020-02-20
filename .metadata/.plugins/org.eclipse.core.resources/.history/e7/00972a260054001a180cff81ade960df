@@ -1,0 +1,18 @@
+package com.curso.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.curso.entities.User;
+import com.curso.repositories.UserRepository;
+
+public class UserService {
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	public List<User> finAll(){
+		return userRepository.findAll();
+	}
+}
